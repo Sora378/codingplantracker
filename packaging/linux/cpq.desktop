@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=CPQ
+Comment=Track coding-plan quota usage from the system tray
+Exec=cpq
+Icon=cpq
+Terminal=false
+Categories=Utility;

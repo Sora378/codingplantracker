@@ -16,7 +16,7 @@ in the OS keyring. CPQ does not store Codex credentials.
 - Localhost-only MiniMax API proxy flows for CLI/proxy use
 - OS keyring storage for MiniMax API keys
 - SQLite history storage for legacy usage snapshots
-- Source build for local install
+- Linux release artifacts for source archive, Debian package, RPM, and AppImage
 
 ## Requirements
 
@@ -85,12 +85,32 @@ coplanage
 Codex profiles do not store tokens. They use the active Codex CLI login, or an
 optional `CODEX_HOME` path when you add a separate Codex profile.
 
-## Packaging
+## Releases
 
 The application identity is `coplanage`, while the command name is `cpq`.
 
-Debian packaging is not included in the current source tree. Build from source
-with `go build -o cpq .` until package staging files are added.
+Tagged releases publish Linux artifacts on GitHub:
+
+- `cpq-<version>-linux-amd64.tar.gz`
+- `cpq_<version>_amd64.deb`
+- `cpq-<version>-*.rpm`
+- `cpq-<version>-x86_64.AppImage`
+- `SHA256SUMS`
+
+Create a release by pushing a version tag:
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+Build release artifacts locally:
+
+```bash
+scripts/package-linux.sh 0.1.0 amd64
+```
+
+Artifacts are written to `dist/`.
 
 ## Security Notes
 
