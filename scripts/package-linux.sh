@@ -85,8 +85,8 @@ mkdir -p %{buildroot}
 cp -a usr %{buildroot}/
 
 %files
-%license usr/share/doc/cpq/LICENSE
-%doc usr/share/doc/cpq/README.md
+%license /usr/share/doc/cpq/LICENSE
+%doc /usr/share/doc/cpq/README.md
 /usr/bin/cpq
 /usr/share/applications/cpq.desktop
 /usr/share/icons/hicolor/256x256/apps/cpq.png
