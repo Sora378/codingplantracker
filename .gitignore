@@ -1,0 +1,27 @@
+# Build artifacts
+/cpq
+*.deb
+*.tar.gz
+*.rpm
+*.AppImage
+*.out
+*.test
+
+# Logs
+*.log
+
+# Dist/release outputs
+/dist/
+/release/
+/coverage/
+
+# Local workflow docs
+/AGENTS.md
+/PLAN.md
+/security_best_practices_report.md
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
+.codex
